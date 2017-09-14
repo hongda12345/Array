@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Math</title>
+	<link rel="stylesheet" href="Math.css">
+</head>
+<body>
+	<script>
+		// console.log(Math.abs(10));/*绝对值*/
+		// console.log(Math.abs(-10));
+		// console.log(Math.max(-10,10,20,50,30));/*最大值*/
+		// console.log(Math.min(-10,10,20,50,30));/*最小值*/
+		// console.log(Math.round(10.5));/*近似值*/
+		// console.log(Math.round(10.3));
+		// console.log(Math.round(0.2));
+		// console.log(Math.round(-10.5));
+		// console.log(Math.round(-10.2));
+		// console.log(Math.ceil(10.5));/*向上取整*/
+		// console.log(Math.ceil(10.2));
+		// console.log(Math.ceil(-5.3));
+		// console.log(Math.ceil(-0.3));
+		// console.log(Math.ceil(0.3));
+		// console.log(Math.floor(10.5));/*向下取整*/
+		// console.log(Math.floor(10.2));
+		// console.log(Math.floor(-5.3));
+		// console.log(Math.floor(-0.3));
+		// console.log(Math.floor(0.3));
+		// for(i=0;i<10;i++){
+		// console.log(Math.random()*10);/*随机数*/
+		// console.log(Math.random()*10+10);			
+		// console.log(Math.random()*15+5);			
+		// }
+  //       console.log(Math.pow(2,5));/*x的y次方*/
+  //       console.log(Math.pow(10,10));
+  //       console.log(Math.sqrt(100));/*平方根*/
+        //从一个数组中随机挑选三个不重复的数
+        let arr=['a','b','c','d','e'];
+        let result=Random(arr,5);
+        console.log(result);
+        //方法1
+        // function Random(arr,index){
+        // 	let newarr=[];
+        // 	for(let i=0;i<index;i++){	
+        // 		let num=Math.floor(Math.random()*arr.length);
+        // 		// while(newarr.includes(arr[num])){
+        // 		//   num=Math.floor(Math.random()*arr.length);
+        // 	 //    }
+        // 		// newarr.push(arr[num]);
+        // 		if(newarr.includes(arr[num])){
+        // 		  i--;
+        // 	    }else{
+        // 		newarr.push(arr[num]);
+        // 	    }
+
+        // 	}
+        // 	return newarr;
+        // }
+        // 方法2
+        function Random(arr,index){
+        	let newarr=[];
+        	while(newarr.length<index){
+        		let num=Math.floor(Math.random()*arr.length)
+        		if(!newarr.includes(arr[num])){
+        			newarr.push(arr[num]);
+        		}
+        	}
+        	return newarr;
+        }
+	</script>
+</body>
+</html>
